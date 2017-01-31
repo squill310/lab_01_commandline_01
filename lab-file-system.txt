@@ -11,16 +11,16 @@ Follow the instructions line-by-line.
 ==========
 1. Open a new terminal window.
 ----------
-
+Last login: Tue Jan 31 15:46:54 on ttys000
+V217-M04:~ Guest$ 
 ==========
 2. Create a directory called mtec1002.
 ----------
-
-==========
+V217-M04:~ Guest$ mkdir mtec1002
+V217-M04:~ Guest$==========
 3. Change your directory so that you're in mtec1002.
 ----------
-
-==========
+V217-M04:mtec1002==========
 4. Type:
 
 $ pwd
@@ -31,8 +31,7 @@ If it doesn't start at #1 again, or ask for help before moving on!
 
 Copy and paste the output of pwd below.
 ----------
-
-
+/Users/Guest/mtec1002
 
 ==========
 5. Type:
@@ -42,8 +41,9 @@ $ ls
 
 Copy and paste the output below.
 ----------
-
-
+V217-M04:mtec1002 Guest$ mkdir animals
+V217-M04:mtec1002 Guest$ ls
+animals
 
 ==========
 6. Type:
@@ -53,7 +53,9 @@ $ ls
 
 Copy and paste the output below.
 ----------
-
+V217-M04:mtec1002 Guest$ mkdir food
+V217-M04:mtec1002 Guest$ ls
+animals	food
 
 
 ==========
@@ -64,8 +66,9 @@ $ ls
 
 Copy and paste the output below.
 ----------
-
-
+V217-M04:mtec1002 Guest$ mkdir -p foo/bar/baz/qux
+V217-M04:mtec1002 Guest$ ls
+animals	foo	food
 
 ==========
 8. Type:
@@ -75,8 +78,9 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
-
+V217-M04:mtec1002 Guest$ cd foo/bar/baz/qux
+V217-M04:qux Guest$ pwd
+/Users/Guest/mtec1002/foo/bar/baz/qux
 
 ==========
 9. Type:
@@ -86,8 +90,9 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
-
+V217-M04:qux Guest$ cd ../..
+V217-M04:bar Guest$ pwd
+/Users/Guest/mtec1002/foo/bar
 
 ==========
 10. Type:
@@ -97,8 +102,10 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
-
+V217-M04:bar Guest$ cd -
+/Users/Guest/mtec1002/foo/bar/baz/qux
+V217-M04:qux Guest$ pwd
+/Users/Guest/mtec1002/foo/bar/baz/qux
  
 ==========
 11. Type:
@@ -108,8 +115,9 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
-
+V217-M04:qux Guest$ cd ../../../..
+V217-M04:mtec1002 Guest$ pwd
+/Users/Guest/mtec1002
 
 ==========
 12. Type:
@@ -120,7 +128,16 @@ $ ls -l
 
 Copy and paste the first two lines from the output into the space below.
 ----------
-
+V217-M04:mtec1002 Guest$ ls -l
+total 0
+drwxr-xr-x  2 Guest  _guest   68 Jan 31 15:56 animals
+drwxr-xr-x  3 Guest  _guest  102 Jan 31 15:58 foo
+drwxr-xr-x  2 Guest  _guest   68 Jan 31 15:58 food
+V217-M04:mtec1002 Guest$ rmdir animals
+V217-M04:mtec1002 Guest$ ls -l
+total 0
+drwxr-xr-x  3 Guest  _guest  102 Jan 31 15:58 foo
+drwxr-xr-x  2 Guest  _guest   68 Jan 31 15:58 food
 
 
 ==========
@@ -131,7 +148,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
+V217-M04:mtec1002 Guest$ cd ~
+V217-M04:~ Guest$ pwd
+/Users/Guest
 
 
 ==========
@@ -142,8 +161,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
-
+V217-M04:~ Guest$ cd /Volumes
+V217-M04:Volumes Guest$ pwd
+/Volumes
 
 ==========
 15. Type:
@@ -153,9 +173,10 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
-
-
+V217-M04:mtec1002 Guest$ cd /unknown_folder
+-bash: cd: /unknown_folder: No such file or directory
+V217-M04:mtec1002 Guest$ pwd
+/Users/Guest/mtec1002
 ==========
 15. Type:
 
@@ -164,8 +185,9 @@ $ pwd
 
 Copy and paste the output into the space below.
 ----------
-
-
+V217-M04:Volumes Guest$ cd ~/mtec1002
+V217-M04:mtec1002 Guest$ pwd
+/Users/Guest/mtec1002
 
 ==========
 16. Type:
@@ -174,16 +196,16 @@ $ hostname
 
 Copy and paste the output into the space below.
 ----------
-
-
+V217-M04:mtec1002 Guest$ hostname
+V217-M04.local
 
 ==========
 17a. Make sure you're back in your mtec1002, which should be in your home folder.  What command would you use to find out if you're in the right folder?  Write the command below, then run it.
 ----------
-
-
-
-==========
+pwd
+V217-M04:mtec1002 Guest$ pwd
+/Users/Guest/mtec1002
+pineapple==========
 17b. If you're not in the right directory, type the following command:
 
 cd ~/mtec1002
@@ -203,23 +225,28 @@ lemon
 
 Use only one command to make all of these new directories.  Write what command you used below:
 ----------
-
-
-
+ls
+V217-M04:mtec1002 Guest$ mkdir -p pineapple/orange/strawberry/lemon
+V217-M04:mtec1002 Guest$ ls
+foo		food		pineapple
 ==========
 19. Make another directory called aardvark.  
 
 Write the command you used to create the directory below:
 ----------
-
-
+ls
+V217-M04:mtec1002 Guest$ mkdir aardvark
+V217-M04:mtec1002 Guest$ ls
+aardvark	foo		food		pineapple
 
 ==========
 20. List the files and directories in the current directory using the long format.  
 
 What is the modified date of the aardvark directory?
 ----------
-
+V217-M04:mtec1002 Guest$ mkdir aardvark
+V217-M04:mtec1002 Guest$ ls
+aardvark	foo		food		pineapple
 
 
 ==========
@@ -231,15 +258,16 @@ What is the modified date of the aardvark directory?
 
 What command did you use?
 ----------
-
-
-
+ls
+V217-M04:mtec1002 Guest$ mkdir -p foo/bar/baz
+V217-M04:mtec1002 Guest$ ls
+aardvark	foo		food		pineapple
 ==========
 22. Change your directory so that you're in the inner most directory (baz)
 
 What command did you use?
 ----------
-
+pushd
 
 
 ==========
@@ -247,44 +275,42 @@ What command did you use?
 
 What command did you use?
 ----------
-
+popd
 
 ==========
 24. What command is used to delete empty directories?
 ----------
-
+rmdir
 
 
 ==========
 25. What command is used to print out your current working directory?
 ----------
-
+ls Desktop
 
 
 ==========
 26. What flag do I pass to ls to print out all files?
 ----------
-
+ls -a Desktop
 
 
 ==========
 27. What's the shortcut for home directory?
 ----------
-
-
+cd
 
 ==========
 28. What's a pathname?
 ----------
-
-
+A pathname is the general form of the name of a file or directory
 
 ==========
 29. What's a directory?
 ----------
-
-
+A directory is a cataloging structure on a file system that references other files
 
 ==========
 30. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
 ----------
+/Users/username/Desktop
